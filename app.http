@@ -1,0 +1,43 @@
+GET http://localhost:3000/todos/?category=LEARNING&priority=HIGH
+
+###
+
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+
+###
+GET http://localhost:3000/agenda/?date=2021-02-22
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNzExODU2ODA0fQ.u4OXBksN3euXGeqZpzBWZwubGsAzumvIH3NCC32Fxv0
+
+###
+
+GET http://localhost:3000/todos/3/
+
+
+###
+
+POST http://localhost:3000/todos/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNzExODU2ODA0fQ.u4OXBksN3euXGeqZpzBWZwubGsAzumvIH3NCC32Fxv0
+{
+ "id": 6,
+ "todo": "Finalize event theme",
+ "priority": "HIGH",
+ "status": "IN PROGRESS",
+ "category": "HOME",
+ "dueDate": "2021-02-22"
+}
+
+###
+
+PUT http://localhost:3000/todos/3/
+
+Content-Type: application/json
+{ "dueDate": "2021-02-22" }
+
+###
+
+DELETE http://localhost:3000/todos/2/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNzExODU2ODA0fQ.u4OXBksN3euXGeqZpzBWZwubGsAzumvIH3NCC32Fxv0
+
+###
